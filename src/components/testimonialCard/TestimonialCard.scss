@@ -110,7 +110,7 @@
 /* ✅ Media Queries */
 @media (max-width: 768px) {
   .testimonial-card {
-    max-width: 70%;     /* Make card shrink to fit mobile */
+    max-width: 100%;     /* Make card shrink to fit mobile */
     padding: 1.5rem;    /* Reduce padding */
   }
 
