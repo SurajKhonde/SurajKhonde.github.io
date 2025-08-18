@@ -1,0 +1,109 @@
+@import "../../_globalColor";
+
+/* Main Testimonial Section */
+.testimonial-container {
+  padding: 3rem 1rem;
+  background-color: $lightBackground2;
+  color: $textColor;
+  transition: all 0.3s ease;
+
+  &.dark-mode {
+    background-color: $darkBackground;
+    color: $textColorDark;
+  }
+}
+
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  .testimonial-heading {
+    font-size: 56px;
+    font-weight: 500;
+    color: $titleColor;
+    margin: 0 0 20px 0;
+    text-align: center;
+
+    &.dark-mode {
+      color: $textColorDark;
+    }
+  }
+
+  .testimonial-subtitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0 0 60px 0;
+    color: $subTitle;
+
+    &.dark-mode {
+      color: $textColorDark;
+    }
+  }
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Card styling */
+.testimonial-card {
+  background: $lightBackground2;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid $lightBorder1;
+
+  /* Base shadow */
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    /* ✅ Same hover glow as project-card-light */
+    box-shadow: $buttonColor 0px 20px 40px -10px;
+    transform: translateY(-5px);
+  }
+
+  &.dark-mode {
+    background: $darkBackground;
+    color: $textColorDark;
+    box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+
+    &:hover {
+      
+      box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+    }
+  }
+}
+
+/* Responsive subtitle */
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 1rem 1rem;
+  }
+  .testimonial-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  
+    .testimonial-heading {
+      font-size: 30px;
+      font-weight: 500;
+    }
+    .testimonial-subtitle {
+      font-size: 20px;
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+ 
+  
+}
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 0 0rem;
+}
+}
